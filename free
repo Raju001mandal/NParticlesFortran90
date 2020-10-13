@@ -1,0 +1,51 @@
+
+set terminal wxt background 'black'
+unset key
+unset tics
+
+unset border
+set pm3d hidden 100
+
+set xrange[-0:80]
+set yrange[-0:80]
+set zrange[-2:80]
+
+
+set palette model HSV defined ( 0 0 1 1, 1 1 1 1 )
+
+unset colorbox
+
+unset colorbox
+
+     set arrow from 0,0,0 to 80,0,0 filled back nohead lw 3 lc rgb "white"
+     set arrow from 80,0,0 to 80,80,0 filled back nohead lw 3 lc rgb "white"
+     set arrow from 80,80,0 to 0,80,0 filled back nohead lw 3 lc rgb "white"
+     set arrow from 0,0,0 to  0,80,0 filled back nohead lw 3 lc rgb "white"
+     set arrow from 80,0,80 to 80,80,80 filled back nohead lw 3 lc rgb "white"
+     set arrow from  80,80,80 to  0,80,80 filled back nohead lw 3 lc rgb "white"
+     set arrow from  0,0,80 to 0,80,80 filled back nohead lw 3 lc rgb "white"
+     set arrow from 0,0,80 to 80,0,80 filled back nohead lw 3 lc rgb "white"
+     set arrow from 0,0,0 to 0,0,80 filled back nohead lw 3 lc rgb "white"
+     set arrow from 0,80,0 to 0,80,80 filled back nohead lw 3 lc rgb "white"
+     set arrow from 80,0,0 to 80,0,80 filled back nohead lw 3 lc rgb "white"
+     set arrow from 80,80,0 to 80,80,80 filled back nohead lw 3 lc rgb "white"  
+
+
+n=50000
+
+do for [i=10:n:20]{
+
+set multiplot layout 1,1
+
+set view 70,360*i*5/n
+
+sp sprintf('%d.dat',i) u 1:2:3 every 1 with p pt 7 ps 0.1 lc palette 
+   
+    
+   
+
+unset multiplot
+
+
+
+}
