@@ -5,7 +5,7 @@ implicit none
 
 integer::i,j,k,n,ok,nn,tot,mm,zzz,col
 real,allocatable,dimension(:)::pos,vel
-INTEGER, DIMENSION (1) :: seed = 123456789
+INTEGER,parameter:: seed = 123456789
 integer,parameter::m=1,niter=50000,outunit=50
 real::avg_vx,avg_vy,avg_vz,vel1x,vel1y,vel1z,vel2x,vel2y,vel2z,num1,num2,num3,num11,num22,num33
 real,parameter::lx=80.0,ly=80.0,lz=80.0,dt=0.005
