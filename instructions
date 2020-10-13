@@ -1,0 +1,12 @@
+instructions:
+
+1.make a different folder 
+2.put the main program there
+3.run the program
+4.niter number of dat file will be generated in the same folder on each run
+5.open the gnuplot in the same folder and visualize.
+6.if you want to run the program for the second time it will be better to delete the previous enormous number of dat files using following gnucmd...."$ find . -name "*.dat" -type f -delete"
+
+7.you can run and visualize again and again just by using the previous steps.
+
+thank you.
