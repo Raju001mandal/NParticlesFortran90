@@ -194,7 +194,7 @@ do i=1,niter
     pos(3*nn)  =pos(3*nn)+vel(3*nn)*dt
     
    end do
- 
+   !===========================FOR VISUALIZATION OF MICROSTATES===============================================
  if(mod(i,10)==0)then
   write(fn,fmt='(i0,a)') i,'.dat'
   open(unit=outunit,file=fn,form='formatted')
@@ -203,8 +203,8 @@ do i=1,niter
     end do
     close(outunit) 
   end if  
+!============================================================================================================
 end do
-
 print*,'col= ',col
 
 end program
